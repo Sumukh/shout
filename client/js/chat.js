@@ -350,21 +350,21 @@ $(function() {
 	
 	chat.on("click", ".user", function(e) {
 		e.preventDefault();
-		var user = $(this);
-		var id = user
-			.closest(".window")
-			.data("id");
-		
-		// Strip modes.
-		var name = user.html().trim().replace(/[+%@~]/, "");
-		if (name.match(/[#.]|-!-/) != null) {
-			return;
-		}
-		
-		socket.emit("input", {
-			id: id,
-			text: "/whois " + name,
-		});
+		// 	var user = $(this);
+		// 	var id = user
+		// 		.closest(".window")
+		// 		.data("id");
+			
+		// 	// Strip modes.
+		// 	var name = user.html().trim().replace(/[+%@~]/, "");
+		// 	if (name.match(/[#.]|-!-/) != null) {
+		// 		return;
+		// 	}
+			
+		// 	socket.emit("input", {
+		// 		id: id,
+		// 		text: "/whois " + name,
+		// 	});
 	});
 	
 	chat.on("focus", ".input", function() {
