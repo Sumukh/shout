@@ -1,20 +1,20 @@
 module.exports = {
   port: 9000,
   password: "",
-  log: false,
+  log: true,
   theme: "",
   defaults: {
-    nick: "shout-user",
-    realname: "http://github.com/erming/shout",
+    nick: "cs61a-student",
+    realname: "A CS 61A Student",
   },
   networks: [{
-    host: "chat.freenode.net",
-    port: 6697,
-    tls: true,
+    host: "107.170.82.182",
+    port: 6667,
+    tls: false,
     onConnect: {
       commands: [""],
       join: [
-        "#shout-irc",
+        "#general",
       ]
     }
   }]
