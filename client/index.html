@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	
-	<title>Shout</title>
+	<title>CS61A IRC</title>
 	
 	<link rel="stylesheet" href="/css/normalize.css">
 	<link rel="stylesheet" href="/css/icons/octicons.css">
@@ -23,26 +23,26 @@
 	<div id="viewport">
 		<aside id="sidebar">
 			<section>
-				<h1>Shout</h1>
+				<h1>CS61A IRC</h1>
 				<a id="settings-link" href="#settings" data-name="Settings">
 					<i class="octicon octicon-clippy"></i>
 					Settings
 				</a>
-				<% if (password) { %>
-				<a id="login" href="#sign-in" data-name="Sign in">
-					<i class="octicon octicon-sign-in"></i>
-					Sign in
-				</a>
-				<a id="logout" href="" style="display: none;">
-					<i class="octicon octicon-sign-out"></i>
-					Sign out
-				</a>
-				<% } %>
-			</section>
+<!-- 				<% if (password) { %>  -->					
+					<a id="login" href="#sign-in" data-name="Sign in">
+						<i class="octicon octicon-sign-in"></i>
+						Sign in
+					</a>
+<!-- 					<a id="logout" href="" style="display: none;">
+						<i class="octicon octicon-sign-out"></i>
+						Sign out
+					</a>
+ --><!-- 				<% } %>
+ -->			</section>
 			<div id="networks"></div>
 			<footer class="footer">
 				<small>
-					Shout <%= version %>
+					Be nice!  <!-- Powered by Shout <%= version %> -->
 				</small>
 			</footer>
 		</aside>
@@ -95,12 +95,12 @@
 			</div>
 			<div id="sign-in" class="window">
 				<div class="wrap">
-					<h1>Shout</h1>
+					<h1>CS61A IRC</h1>
 					<h2>You need to sign in to continue.</h2>
 					<form id="sign-in-form" method="post">
-						<h3>Password:</h3>
-						<input id="sign-in-input" type="password" autofocus>
-						<button type="submit" class="btn">
+						<h3>Your Name:</h3>
+							<input id="sign-in-name" type="text" autofocus>
+							<button type="submit" class="btn">
 							Sign in
 						</button>
 					</form>

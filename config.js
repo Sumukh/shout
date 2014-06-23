@@ -1,6 +1,6 @@
 module.exports = {
   port: 9000,
-  password: "",
+  password: "61a",
   log: true,
   theme: "",
   defaults: {

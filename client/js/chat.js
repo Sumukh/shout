@@ -132,6 +132,8 @@ $(function() {
 					.last()
 					.trigger("click");
 			}
+			$('a[data-name="#general"]').click();
+
 			break;
 		
 		case "part":
@@ -245,7 +247,7 @@ $(function() {
 			.empty();
 		
 		$.cookie("current", target);
-		document.title = link.data("name") + " — Shout";
+		document.title = link.data("name") + " — 61A IRC";
 		
 		if (sidebar.find(".highlight").length == 0) {
 			favicon.badge("");
@@ -411,7 +413,10 @@ $(function() {
 	
 	$("#sign-in-form").on("submit", function(e) {
 		e.preventDefault();
+		$.cookie("nick", $("#sign-in-name").val());
+		socket.emit("username", $("#sign-in-name").val());
 		socket.emit("auth", $("#sign-in-input").val());
+		$('a[data-name="#general"]').click();
 	});
 	
 	$("#notification").on("click", function() {

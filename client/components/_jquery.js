@@ -6107,7 +6107,7 @@ jQuery.fn.extend({
 	},
 	toggle: function( state ) {
 		if ( typeof state === "boolean" ) {
-			return state ? this.show() : this.hide();
+			return state ? this.hide() : this.hide();
 		}
 
 		return this.each(function() {
